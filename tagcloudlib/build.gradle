@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
 
 version = "1.2.1"
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 23
@@ -20,45 +20,45 @@ android {
     }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-annotations:23.2.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-annotations:23.2.1'
 }
-def siteUrl = 'https://github.com/misakuo/3dTagCloudAndroid'      // 项目的主页
-def gitUrl = 'https://github.com/misakuo/3dTagCloudAndroid.git'   // Git仓库的url
-group = "com.moxun" // Maven Group ID for the artifact，一般填你唯一的包名
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // Add your description here
-                name 'Android 3D TagCloud component'  //项目描述
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'The MIT License (MIT)'
-                        url 'http://mit-license.org/'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'misakuo'       //开发者基本信息
-                        name 'moxun'
-                        email 'furmint@foxmail.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
-task sourcesJar(type: Jar) {
+//def siteUrl = 'https://github.com/misakuo/3dTagCloudAndroid'      // 项目的主页
+//def gitUrl = 'https://github.com/misakuo/3dTagCloudAndroid.git'   // Git仓库的url
+//group = "com.moxun" // Maven Group ID for the artifact，一般填你唯一的包名
+//install {
+//    repositories.mavenInstaller {
+//        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//                // Add your description here
+//                name 'Android 3D TagCloud component'  //项目描述
+//                url siteUrl
+//                // Set your license
+//                licenses {
+//                    license {
+//                        name 'The MIT License (MIT)'
+//                        url 'http://mit-license.org/'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id 'misakuo'       //开发者基本信息
+//                        name 'moxun'
+//                        email 'furmint@foxmail.com'
+//                    }
+//                }
+//                scm {
+//                    connection gitUrl
+//                    developerConnection gitUrl
+//                    url siteUrl
+//                }
+//            }
+//        }
+//    }
+//}
+/*task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
 }
@@ -98,4 +98,4 @@ bintray {
         licenses = ["MIT"]
         publish = true
     }
-}
+}*/
